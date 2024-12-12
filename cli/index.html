@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga Profile Scanning Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Logo at the top-right corner -->
+  <div class="logo-container">
+    <img class="logo" src="https://drive.google.com/file/d/1PZEOVBTRhJHBasktF8aXTxXgGMvmY9iI/view?usp=sharing" alt="Logo">
+  </div>
+
+  <div class="container">
+    <h1>Yoga Profile Booster Bot</h1>
+    <p>Click the button to start scanning for students and recommend your yoga profile.</p>
+    
+    <div id="visualization">
+      <div id="scanningArea"></div>
+      <progress id="progressBar" max="100" value="0"></progress>
+    </div>
+
+    <button id="scanBtn">Start Scanning</button>
+
+    <div id="insights">
+      <p><strong>Total Students Found:</strong> <span id="totalProfiles">0</span></p>
+      <p><strong>Profiles Recommended:</strong> <span id="boostedProfiles">0</span></p>
+    </div>
+
+    <div id="apiKeyContainer">
+      <label for="apiKey">Enter API Key:</label>
+      <input type="text" id="apiKey" placeholder="API Key" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
