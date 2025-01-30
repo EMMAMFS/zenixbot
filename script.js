@@ -1,14 +1,48 @@
-// Generate large lists of random names
-const randomNames = Array.from({ length: 1000 }, (_, i) => `Name${i + 1}`);
+// Real names
+const realNames = [
+ "Emma", "Liam", "Olivia", "Noah", "Sophia", "Mason", "Isabella", "Logan", "Ava", "Lucas",
+  "Mia", "Ethan", "Charlotte", "James", "Amelia", "Aiden", "Harper", "Sebastian", "Evelyn", 
+  "Alexander", "Elijah", "Abigail", "William", "Emily", "Matthew", "Elizabeth", "Benjamin", 
+  "Scarlett", "Henry", "Sofia", "Jackson", "Aria", "Michael", "Chloe", "Daniel", "Grace", 
+  "Carter", "Ella", "Wyatt", "Madison", "Julian", "Lily", "David", "Aubrey", "Gabriel", "Zoey", 
+  "Jayden", "Penelope", "Owen", "Hannah", "Levi", "Nora", "Caleb", "Lillian", "Isaiah", "Addison", 
+  "John", "Layla", "Nathan", "Zoe", "Luke", "Audrey", "Ryan", "Ellie", "Anthony", "Stella", "Dylan", 
+  "Natalie", "Samuel", "Paisley", "Sebastian", "Hazel", "Christian", "Aurora", "Hunter", "Brooklyn", 
+  "Jack", "Violet", "Levi", "Claire", "Aaron", "Savannah", "Thomas", "Skylar", "Adrian", "Lucy", 
+  "Christopher", "Anna", "Andrew", "Genesis", "Joshua", "Kennedy", "Nolan", "Samantha", "Dominic", 
+  "Maya", "Leo", "Eva", "Joseph", "Aaliyah", "Eli", "Taylor", "Isaac", "Riley", "Lincoln", "Leah",
+  "Grayson", "Madeline", "Asher", "Ariana", "Christopher", "Eliana", "Jaxon", "Ruby", "Ezra", 
+  "Serenity", "Hudson", "Autumn", "Mateo", "Eleanor", "Angel", "Jade", "Cooper", "Melanie", "Carson", 
+  "Naomi", "Easton", "Rylee", "Parker", "Hadley", "Ezra", "Gabriella", "Miles", "Sadie", "Sawyer", 
+  "Isla", "Jason", "Allison", "Emmett", "Clara", "Micah", "Julia", "Adam", "Faith", "Maverick", 
+  "Charlie", "Nathaniel", "Kaylee", "Elias", "London", "Axel", "Eliza", "Jonah", "Vivian", "Everett", 
+  "Cora", "Ryder", "Valentina", "Greyson", "Alyssa", "Jameson", "Camila", "Kai", "Aubree", "Rowan", 
+  "Lyla", "Bentley", "Piper", "Jasper", "Adeline", "August", "Brielle", "Jude", "Katherine", 
+  "Beckett", "Delilah", "Malachi", "Mackenzie", "Brooks", "Jocelyn", "Emiliano", "Payton", "Xavier", 
+  "Alina", "Calvin", "Reese", "Grant", "Amaya", "Alan", "Athena", "Bennett", "Kinsley", "Elliot", 
+  "Ayla", "River", "Nicole", "Barrett", "Daisy", "Roman", "Rebecca", "Theo", "Brooklynn", "Giovanni", 
+  "Lila", "Francisco", "Molly", "Ezekiel", "Leila", "Zane", "Adelaide", "Vincent", "Amber", "Max", 
+  "Phoebe", "Miles", "Maria", "Gavin", "Camilla", "Amir", "Elliana", "Tristan", "Alexandra", 
+  "Silas", "Georgia", "Archer", "Daniela", "Caden", "Harley", "Omar", "Hope", "Kobe", "Tessa", 
+  "Zion", "Gracie", "Charlie", "Alexis", "Luis", "Maggie", "Camden", "Alivia", "Preston", 
+  "Harmony", "Oscar", "Morgan", "Leonardo", "Jasmine", "Damian", "Briana", "Diego", "Paislee", 
+  "Zachary", "Gemma", "Enzo", "Dahlia", "Jax", "Harlow"
+];
 
-// Generate large lists of random locations
-const randomLocations = Array.from({ length: 1000 }, (_, i) => `City${i + 1}, State${i % 50}`);
+// Real locations
+const realLocations = [
+  "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX", "Phoenix, AZ",
+  "Philadelphia, PA", "San Antonio, TX", "San Diego, CA", "Dallas, TX", 
+  "San Jose, CA", "Austin, TX", "Jacksonville, FL", "Fort Worth, TX", 
+  "Columbus, OH", "Indianapolis, IN", "Charlotte, NC", "San Francisco, CA", 
+  "Seattle, WA", "Denver, CO", "Washington, DC"
+];
 
 // Generate 50,000 student profiles
 const students = Array.from({ length: 50000 }, (_, i) => ({
   id: i + 1,
-  name: randomNames[Math.floor(Math.random() * randomNames.length)],
-  location: randomLocations[Math.floor(Math.random() * randomLocations.length)],
+  name: realNames[Math.floor(Math.random() * realNames.length)],
+  location: realLocations[Math.floor(Math.random() * realLocations.length)],
   interestedInYoga: Math.random() > 0.5, // Randomly assign interest
 }));
 
